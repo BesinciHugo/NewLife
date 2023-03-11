@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Color.fromRGBO(240, 238, 237, 1) ,
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(201, 44, 109, 1),
-        title:Text("First Day Of My New Life", style: GoogleFonts.dancingScript(fontSize: 35),),
+        title:Text("First Day Of My New Life", style: GoogleFonts.dancingScript(fontSize: 25),),
         centerTitle: true,
       ),
       body: ListView.builder(
