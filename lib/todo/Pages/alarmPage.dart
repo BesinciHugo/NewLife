@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: TextButton(
                 child: const Text(
                   'Create alarm',
-                  style: TextStyle(fontSize: 30.0, color: Color.fromRGBO(97, 158, 162, 1)),
+                  style: TextStyle(fontSize: 30.0, color: Color.fromRGBO(97, 157, 162, 1)),
                 ),
                 onPressed: () {
                   int hour;
