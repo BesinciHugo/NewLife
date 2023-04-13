@@ -4,6 +4,7 @@ import 'package:todo/data/dataBase.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'ToDoList.dart';
 import 'taskAddBox.dart';
+import 'alarmPage.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -91,12 +92,16 @@ class _HomePageState extends State<HomePage> {
           }
       ),
 
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Color.fromRGBO(201, 44, 109, 1),
-        onPressed: createNewTask,
-        child: Icon(Icons.add),
-      ) ,
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          FloatingActionButton(
+            backgroundColor: Color.fromRGBO(201, 44, 109, 1),
+            onPressed: createNewTask,
+            child: Icon(Icons.add),
+          )
+        ],
+      )
       );
   }
 }

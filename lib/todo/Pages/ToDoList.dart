@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'alarmPage.dart';
 
 class ToDoList extends StatelessWidget {
     final String taskName;
@@ -17,6 +20,9 @@ class ToDoList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+
+
     return Padding(padding: const EdgeInsets.all(10.0),
       child: Slidable(
         endActionPane: ActionPane(
@@ -27,7 +33,6 @@ class ToDoList extends StatelessWidget {
               icon: Icons.delete,
               backgroundColor: Color.fromRGBO(51, 44, 57, 1),
               borderRadius: BorderRadius.circular(10),
-
             )
           ],
     ),
@@ -38,9 +43,13 @@ class ToDoList extends StatelessWidget {
 
             Checkbox(value: taskCompleted, onChanged: onChanged, activeColor: Color.fromRGBO(201, 44, 109, 1)),
 
-            Text(taskName, style: TextStyle(decoration: taskCompleted ? TextDecoration.lineThrough : TextDecoration.none)),
-          ],
+            Expanded(child: Text(taskName, style: TextStyle(decoration: taskCompleted ? TextDecoration.lineThrough : TextDecoration.none)),),
 
+            IconButton(
+                onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => alarmPage()));},
+                icon: Icon(Icons.add_alarm))
+
+          ],
         ),
         decoration:BoxDecoration(
           color: Color.fromRGBO(96, 158, 162, 1),
@@ -48,8 +57,7 @@ class ToDoList extends StatelessWidget {
         ),
       ),
     )
-
-
     );
   }
 }
+

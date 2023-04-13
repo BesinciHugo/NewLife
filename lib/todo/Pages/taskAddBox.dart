@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'MyButtons.dart';
+import 'alarmPage.dart';
 
 class DialogBox  extends StatelessWidget {
   final controller;
@@ -39,7 +40,7 @@ class DialogBox  extends StatelessWidget {
             children: [
               MyButtons(text: "Save", onPressed: onSave),
 
-              MyButtons(text: "Cancel", onPressed: onCancel)
+              MyButtons(text: "Cancel", onPressed: onCancel),
             ],
           )
 
