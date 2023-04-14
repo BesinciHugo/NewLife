@@ -100,16 +100,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: TextStyle(fontSize: 20.0),
               ),
             ),
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                primary: Color.fromRGBO(96, 158, 162, 1), // Background color
-              ),
-              child: Text(
-                "Show Timers",
-                style: TextStyle(fontSize: 17),
-              ),
-            )
           ])),
 
       floatingActionButton: FloatingActionButton(
