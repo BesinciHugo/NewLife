@@ -100,34 +100,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: TextStyle(fontSize: 20.0),
               ),
             ),
-            Container(
-              margin: const EdgeInsets.all(25),
-              child: TextButton(
-                  child: const Text(
-                    'Create timer',
-                    style: TextStyle(fontSize: 30.0, color: Color.fromRGBO(96, 158, 162, 1)),
-                  ),
-                  onPressed: () {
-                    int minutes;
-                    minutes = int.parse(minuteController.text);
-
-                    // create timer
-                    FlutterAlarmClock.createTimer(minutes);
-                    showDialog(
-                        context: context,
-                        builder: (context) {
-                          return AboutDialog(
-                            children: [
-                              Center(
-                                child: Text("Timer is set",
-                                    style: TextStyle(
-                                        fontSize: 20, fontWeight: FontWeight.bold)),
-                              )
-                            ],
-                          );
-                        });
-                  }),
-            ),
             ElevatedButton(
               onPressed: () {
                 FlutterAlarmClock.showTimers();
