@@ -101,9 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             ElevatedButton(
-              onPressed: () {
-                FlutterAlarmClock.showTimers();
-              },
+              onPressed: () {},
               style: ElevatedButton.styleFrom(
                 primary: Color.fromRGBO(96, 158, 162, 1), // Background color
               ),
